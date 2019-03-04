@@ -1,0 +1,10 @@
+<h1>New test question</h1>
+<form class="" action=" /tests/<%= params[:test_id] %>/questions" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>
+    <label for="body">Body:</label>
+    <input type="text" name="question[body]" id="body">
+  </p>
+  <br>
+  <input type="submit" value="Create">
+</form>
