@@ -1,0 +1,27 @@
+.pointer {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.border-red {
+  border: 1px solid red;
+  background: rgba(255, 0, 0, 0.2);
+
+  &:focus {
+    border: 1px solid red;
+    background: rgba(255, 0, 0, 0.2);
+  }
+}
+
+.border-green {
+  border: 1px solid green;
+  background: rgba(0, 255, 0, 0.2);
+
+  &:focus {
+    border: 1px solid green;
+    background: rgba(0, 255, 0, 0.2);
+  }
+}

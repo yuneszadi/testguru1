@@ -1,3 +1,4 @@
+en:
   helpers:
     services:
       gist_header: "Question for %{title} test on TestGuru"
@@ -58,6 +59,7 @@
         show: "Show"
         edit: "Edit"
         delete: "Delete"
+        cancel: "Cancel"
       form:
         back: "Back"
       new:
@@ -78,6 +80,8 @@
       new:
         header: "Create new %{title} question"
         back: "Back"
+      form_inline:
+        submit: "OK"
       edit:
         header: "Edit %{title} question"
         back: "Back"

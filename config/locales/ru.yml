@@ -9,6 +9,8 @@ ru:
       test:
         create: "Создать тест"
         update: "Обновить тест"
+      user:
+        new: "Вход"
     label:
       test:
         title: "Название"
@@ -63,6 +65,7 @@ ru:
         show: "Показать"
         edit: "Изменить"
         delete: "Удалить"
+        cancel: "Отмена"
       form:
         back: "Назад"
       new:
@@ -79,6 +82,8 @@ ru:
         actions: "Действия"
         edit: "Изменить"
         back: "Назад"
+      form_inline:
+        submit: "OK"        
     questions:
       new:
         header: "Создание нового вопроса к тесту \"%{title}\""
