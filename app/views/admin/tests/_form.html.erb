@@ -12,6 +12,15 @@
     <%= form.label :category_id %><br>
     <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
   </p>
+  <p id="checkbox">
+    <%= form.check_box :timer, class: 'timer-checkbox' %>
+    <%= form.label :timer, t('.timer_label'), class: 'checkbox-label' %><br>
+  </p>
+  <p id="timer-field">
+    <%= form.label :timer %><br>
+    <%= form.text_field :timer%>
+  </p>
+
   <p><%= form.submit %></p>
 
   <%= link_to t('.back'), admin_tests_path%>

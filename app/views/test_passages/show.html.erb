@@ -8,6 +8,12 @@
                   } %>
 </div>
 
+<% if @test_passage.test.timer > 0 %>
+<div class="remaining_time" >
+  <%= t('.remaining_time') %>: <%= content_tag :span, '', class: 'timer', data: { time: @test_passage.remaining_time } %>
+</div>
+<% end %>
+
 <p>
   <b><%= @test_passage.current_question.body %></b>
 </p>

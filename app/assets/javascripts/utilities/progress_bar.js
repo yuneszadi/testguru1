@@ -5,6 +5,5 @@ document.addEventListener('turbolinks:load', function () {
     var allQuestion = progressBar.dataset.allQuestion;
     var width = (currentQuestion / allQuestion * 100) + "%";
     progressBar.style.width = width;
-    console.log(progressBar);
   }
 })

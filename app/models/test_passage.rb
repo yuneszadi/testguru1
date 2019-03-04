@@ -36,6 +36,18 @@ class TestPassage < ApplicationRecord
     test.questions.where('id < ?', current_question.id).count + 1
   end
 
+  def remaining_time
+    (active_until - Time.current).to_i
+  end
+
+  def end_time?
+    Time.current > active_until
+  end
+
+  def stop
+    self.current_question = nil
+  end
+
   private
 
   def before_save_set_result
@@ -57,5 +69,9 @@ class TestPassage < ApplicationRecord
   def next_question
     return test.questions.first if current_question.nil?
     test.questions.order(:id).where('id > ?', current_question.id).first
+  end
+
+  def active_until
+    created_at + test.timer.minutes
   end
 end

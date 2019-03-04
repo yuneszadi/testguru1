@@ -1,16 +1,12 @@
 class TestPassagesController < ApplicationController
-
   before_action :find_test_passage, only: %i[show result update]
+  before_action :check_time, only: :update
 
   def show; end
 
   def result; end
 
   def update
-    if @test_passage.empty_answer?(params[:answer_ids])
-      return render :show, alert: "You did't select any answers."
-    end
-
     @test_passage.accept!(params[:answer_ids])
 
     if @test_passage.completed?
@@ -35,6 +31,14 @@ class TestPassagesController < ApplicationController
   end
 
   private
+
+  def check_time
+    @test_passage.stop if check_remaining_time
+  end
+
+  def check_remaining_time
+    @test_passage.test.with_timer? && @test_passage.end_time?
+  end
 
   def find_test_passage
     @test_passage = TestPassage.find(params[:id])

@@ -144,3 +144,4 @@ ru:
       question_count: "Вопрос: %{q_count}"
       next: "Следующий"
       exit: "Выход"
+      remaining_time: "Оставшееся время"
