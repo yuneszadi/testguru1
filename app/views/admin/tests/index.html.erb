@@ -1,5 +1,7 @@
+<%= link_to t('.public'),  tests_path, class: 'btn btn-success' %>
 <h1><%= t('.header') %></h1>
-<%= link_to I18n.t('admin.tests.index.button'),  new_admin_test_path %>
+<%= link_to t('.button'),  new_admin_test_path, class: 'btn btn-dark' %>
+<%= link_to t('.all_gists'),  admin_gists_path, class: 'btn btn-dark' %>
 <table>
   <tr>
     <th><%= t('.id') %></th>

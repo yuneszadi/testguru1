@@ -1,0 +1,13 @@
+<table class="table table-striped">
+  <thead>
+    <th>#</th>
+    <th>Вопрос</th>
+    <th>URL</th>
+    <th>User</th>
+  </thead>
+  <tbody>
+    <%= render 'gist' %>
+  </tbody>
+</table>
+
+<%= link_to t('.back'),  admin_tests_path, class: 'btn btn-dark' %>

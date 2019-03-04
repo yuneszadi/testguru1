@@ -1,0 +1,8 @@
+<% @gists.each do |gist| %>
+  <tr>
+    <th scope="row"></th>
+    <td><%= gist_link(gist) %></td>
+    <td><%= link_to "Gist", gist.gist_url %></td>
+    <td><%= gist.user.email %></td>
+  </tr>
+<% end %>

@@ -1,4 +1,7 @@
   helpers:
+    services:
+      gist_header: "Question for %{title} test on TestGuru"
+
     select:
       prompt: "Please select"
     submit:
@@ -49,6 +52,8 @@
         level: "Level"
         questions: "Questions"
         actions: "Actions"
+        all_gists: "All gists"
+        public: "To public"
       test:
         show: "Show"
         edit: "Edit"
@@ -119,3 +124,7 @@
       question_count: "Question: %{q_count}"
       next: "Next"
       exit: "Exit"
+      gist_question: "Create Gist"
+    gist:
+      success: "Gist was successfully created"
+      failure: "An error occurred while saving gist"
