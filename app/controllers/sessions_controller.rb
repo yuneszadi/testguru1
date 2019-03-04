@@ -4,8 +4,8 @@ class SessionsController < ApplicationController
   def new; end
 
   def create
-    if user&.authenticate(params[:password])
-      session[:user_id] = user.id
+    if @user&.authenticate(params[:password])
+      session[:user_id] = @user.id
       redirect_to session[:request_page].to_s
     else
       redirect_to root_path
@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:user_id] = nil
+    session.delete(:user_id)
     redirect_to root_path, notice: 'Logout!'
   end
 

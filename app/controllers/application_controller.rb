@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   private
 
   def set_request_page
+    return unless request.get?
     session[:request_page] = request.fullpath
   end
 

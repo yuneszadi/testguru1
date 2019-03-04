@@ -1,6 +1,5 @@
-class TestsController < ApplicationController
-  before_action :set_request_page
-  before_action :authenticate_user!
+class TestsController < AuthController
+
   skip_before_action :authenticate_user!, only: [:index]
   before_action :find_user, only: %i[start create]
   before_action :find_test, only: %i[destroy update edit show start]
