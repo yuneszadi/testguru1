@@ -1,0 +1,36 @@
+<%= render 'shared/errors', resource: @badge %>
+
+<%= form_with(model: [:admin, @badge], local: true) do |f| %>
+    <div class="form-group">
+      <%= f.label :title %><br>
+      <%= f.text_field :title, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :cover %><br>
+      <%= f.text_field :cover, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :rule %><br>
+      <%= f.select :rule,
+                   Badge.rule.options,
+                   { include_blank: I18n.t('.select_category') },
+                   id: 'category_input',
+                   class: 'form-control'%>
+    </div>
+
+    <div class="form-group" style="padding: 15px;">
+      <div id="primary_param" class="hide">
+        <%= f.label :primary_param %><br>
+        <%= f.text_field :primary_param, class: 'form-control' %>
+      </div>
+      
+      <p id="secondary_param" class="hide">
+        <%= f.label :secondary_param %><br>
+        <%= f.text_field :secondary_param, class: 'form-control' %>
+      </p>
+    </div>
+
+    <%= f.submit t('.save'),class: 'btn btn-success mt-2' %>
+<% end%>

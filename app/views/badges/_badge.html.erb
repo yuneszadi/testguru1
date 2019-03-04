@@ -1,0 +1,12 @@
+<div class="col-3 offset-1 card badge-card">
+  <img class="card-img-top badge-img" src="<%= badge.cover %>" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"><%= badge.title %></h5>
+    <p class="card-text">
+      Выдается <%= badge.rule %> <%=badge.primary_param %>
+      <% if badge.rule == 'single_badge' %>
+        уровня <%= badge.secondary_param %>
+      <% end %>
+    </p>
+  </div>
+</div>

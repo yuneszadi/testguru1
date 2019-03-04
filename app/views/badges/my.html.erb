@@ -1,0 +1,6 @@
+<h1><%= t('.my_badges') %></h1>
+<%= link_to t('.back'), badges_path, class: 'btn btn-primary mb-2' %>
+
+<div class="row justify-content-around">
+    <%= render @badges %>
+</div>

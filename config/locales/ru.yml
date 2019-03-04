@@ -1,4 +1,10 @@
 ru:
+  select_category: "выберите категорию"
+  enumerize:
+    rule:
+      category_badge: "за прохождение всех тестов в категории"
+      single_badge: "за прохождение теста"
+      level_badge: "за прохождение всех тестов на уровне"
   services:
     gist_header: "Вопрос к тесту %{title} на TestGuru"
   helpers:
@@ -83,7 +89,7 @@ ru:
         edit: "Изменить"
         back: "Назад"
       form_inline:
-        submit: "OK"        
+        submit: "OK"
     questions:
       new:
         header: "Создание нового вопроса к тесту \"%{title}\""
@@ -120,6 +126,9 @@ ru:
         edit: "Изменить"
         delete: "Удалить"
         confirm: "Вы уверены?"
+    badges:
+      form:
+        save: "Сохранить"
 
 
   tests_mailer:

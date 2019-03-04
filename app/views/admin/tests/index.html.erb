@@ -2,6 +2,7 @@
 <h1><%= t('.header') %></h1>
 <%= link_to t('.button'),  new_admin_test_path, class: 'btn btn-dark' %>
 <%= link_to t('.all_gists'),  admin_gists_path, class: 'btn btn-dark' %>
+<%= link_to t('.all_badges'),  admin_badges_path, class: 'btn btn-dark' %>
 <%= render 'shared/errors', resource: @test%>
 <table class="table">
   <tr>

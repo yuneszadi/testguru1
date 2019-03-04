@@ -1,0 +1,17 @@
+<h1><%= t('.all_badge')%></h1>
+
+<%= link_to t('.new_badge'), new_admin_badge_path, class: 'btn btn-success' %>
+
+<table class="table">
+  <tr>
+    <td><%= t('.title')%></td>
+    <td><%= t('.cover')%></td>
+    <td colspan="2"><%= t('.params')%></td>
+    <td><%= t('.actions')%></td>
+  </tr>
+  <tbody>
+    <%= render @badges %>
+  </tbody>
+</table>
+
+<%= link_to t('.back'), admin_tests_path %>

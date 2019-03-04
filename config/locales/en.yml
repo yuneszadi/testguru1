@@ -1,4 +1,10 @@
 en:
+  enumerize:
+    category:
+      category_badge: "For passing all the tests in the category"
+      single_badge: "For passing the test"
+      level_badge: "For passing all the tests at the level"
+
   helpers:
     services:
       gist_header: "Question for %{title} test on TestGuru"

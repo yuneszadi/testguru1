@@ -11,6 +11,11 @@ ru:
       user:
         first_name: "Имя"
         last_name: "Фамилия"
+      badge:
+        title: "Название"
+        category: "Категория"
+        cover: "Обложка"
+        primary_param: "Параметры"
 
 
     errors:

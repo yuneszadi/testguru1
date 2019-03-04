@@ -1,0 +1,19 @@
+<div class="card">
+  <img class="card-img-top badge-img" src="<%= @badge.cover %>" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"><%= @badge.title %></h5>
+    <p class="card-text">
+      Выдается <%= @badge.rule %> <%=@badge.primary_param %>
+      <%= @badge.secondary_param if @badge.rule == 'single_badge' %>
+    </p>
+    <div class="badge-buttons">
+      <%= link_to t('.update'), edit_admin_badge_path(@badge) %>
+      <%= link_to t('.delete'),
+                  admin_badge_path(@badge),
+                  method: :delete,
+                  data: { confirm: 'Are you sure?'} %>
+    </div>
+  </div>
+</div>
+
+<%= link_to t('.back'), admin_badges_path %>
