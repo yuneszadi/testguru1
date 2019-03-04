@@ -1,8 +1,3 @@
-<h3>Вопрос #ID<%= @question.id %></h3>
-<span>К тесту: <%= @question.test_id %></span>
+<h3>Вопрос #ID<%= @question.id %>
 <p><%= @question.body %></p>
-
-<form action="/tests/<%= @question.test_id %>/questions/<%= @question.id %>" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="submit" value="Delete">
-</form>
+<%= link_to 'Back', test_path(@question.test_id) %>

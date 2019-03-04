@@ -1,29 +1,45 @@
 class QuestionsController < ApplicationController
-  before_action :find_question, only: %i[show destroy]
-  before_action :find_test, only: %i[create index]
+  before_action :find_question, only: %i[show edit update destroy]
+  before_action :find_test, only: %i[new create]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
-  def index
-    render json: { questions: @test.questions }
+
+  def new
+    @question = @test.questions.new
   end
 
-  def show; end
+  def show
+  end
 
-  def new; end
+  def edit
+  end
+
+  def update
+    if @question.update(question_params)
+      redirect_to @question
+    else
+      render :edit
+    end
+  end
 
   def create
-    @test.questions.create(new_question_parameters)
-    render html: '<h3><center>Question create</center></h3>'.html_safe
+    @question = @test.questions.new(question_params)
+
+    if @question.save
+      redirect_to @question
+    else
+      render :new
+    end
   end
 
   def destroy
     @question.destroy
-    redirect_to test_questions_path
+    redirect_to test_path(@question.test), notice: 'Вопрос удален.'
   end
 
   private
 
-  def new_question_parameters
+  def question_params
     params.require(:question).permit(:body)
   end
 
