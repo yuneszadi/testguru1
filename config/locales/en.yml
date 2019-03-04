@@ -1,33 +1,121 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
+  helpers:
+    select:
+      prompt: "Please select"
+    submit:
+      test:
+        create: "Create Test"
+        update: "Update Test"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+      question:
+        body: "Question body"
+      answer:
+        body: "Answer body"
+        correct: "Correct?"
 
-en:
-  hello: "Hello world"
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected."
+        other: "%{count} errors detected."
+    main_nav:
+      hello: "Welcome, %{user} Guru"
+      logout: "Logout"
+      login: "Login"
+      signup: "Sign up"
+  tests:
+    index:
+      header: 'Tricky Tests'
+      id:  "ID"
+      title: "Title"
+      level: "Level"
+      questions: "Questions"
+      actions: "Actions"
+    test:
+      start: "Start"
+
+  admin:
+    nav:
+      hello: "Welcome, %{user} Guru"
+    tests:
+      index:
+        header: 'Tricky Tests'
+        button: 'Create new test'
+        id:  "ID"
+        title: "Title"
+        level: "Level"
+        questions: "Questions"
+        actions: "Actions"
+      test:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+      form:
+        back: "Back"
+      new:
+        header: "Create Test"
+      edit:
+        header: "Edit %{title} Test"
+      show:
+        header: "%{title} test information"
+        level: "Level:"
+        author: "Author:"
+        question_create: "Create Question"
+        all_questions: "All questions"
+        body: "Body"
+        actions: "Actions"
+        edit: "Edit"
+        back: "Back"
+    questions:
+      new:
+        header: "Create new %{title} question"
+        back: "Back"
+      edit:
+        header: "Edit %{title} question"
+        back: "Back"
+      question:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+      show:
+        header: "%{title} Test's Question"
+        body: "Body:"
+        all_answers: "All answers"
+        new_answer: "New answer"
+        edit: "Edit"
+        back: "Back"
+    answers:
+      new:
+        header: "New answer"
+        back: "Back"
+      edit:
+        header: "Editing answer"
+        show: "Show"
+        back: "Back"
+      show:
+        body: "Answer: %{body}"
+        correct: "Correct: %{correct}"
+        back: "Back"
+      answer:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+
+  tests_mailer:
+    completed_test:
+      subject: 'You just completed TestGuru test.'
+
+  test_passages:
+    result:
+      header: "The %{title} Test Was  Completed"
+      button: "To main"
+    show:
+      header: "Pass the %{title} Test"
+      question_count: "Question: %{q_count}"
+      next: "Next"
+      exit: "Exit"

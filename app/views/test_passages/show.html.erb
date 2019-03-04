@@ -1,5 +1,5 @@
-<h2>Pass the <%= @test_passage.test.title %> Test</h2>
-<p>Question: <%= question_count(@test_passage) %></p>
+<h2><%= t('.header', title: @test_passage.test.title) %></h2>
+<p><%= t('.question_count', q_count: question_count(@test_passage)) %><br>
 <b>
   <%= @test_passage.current_question.body %>
 </b>
@@ -16,7 +16,7 @@
     </p>
   <% end %>
 
-  <%= form.submit 'Next' %>
+  <%= form.submit t('.next') %>
 <% end %>
 
-<%= link_to 'Exit', tests_path %>
+<p class="exit-button"><%= link_to t('.exit'), tests_path %></p>
