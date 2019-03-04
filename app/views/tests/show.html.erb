@@ -1,5 +1,6 @@
 <p><b>Title:</b> <%= @test.title%></p>
 <p><b>Level:</b> <%= @test.level%></p>
+<p><b>Author:</b> <%= @test.author.username%></p>
 
 <%= link_to 'Create Question', new_test_question_path(@test) %>
 

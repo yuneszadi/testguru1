@@ -1,0 +1,26 @@
+.nav {
+  a:hover {
+    color: white;
+    text-decoration: underline;
+    background-color: black;
+  }
+
+  .right {
+    float: right;
+  }
+
+  .brand {
+    text-align: left;
+    font-weight: bold;
+
+    a {
+      border: none;
+
+      &:hover {
+        color: black;
+        text-decoration: underline;
+        background-color: white;
+      }
+    }
+  }
+}

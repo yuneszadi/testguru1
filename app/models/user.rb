@@ -1,12 +1,13 @@
 class User < ApplicationRecord
-  has_many :author_tests, class_name: 'Test', foreign_key: "author_id"
+  has_many :test_passages
+  has_many :tests, through: :test_passages
+  has_many :author_tests, class_name: 'Test', foreign_key: :author_id
 
-  def find_by_level(level)
-    Test.joins('JOIN user_tests ON user_tests.test_id = tests.id').where(
-      level: level,
-      user_tests: { user_id: id }
-    )
+  validates :email, uniqueness: true
+
+  has_secure_password
+
+  def test_passage(test)
+    test_passages.order(created_at: :desc).find_by(test: test)
   end
-
-  validates :username, presence: true
 end
