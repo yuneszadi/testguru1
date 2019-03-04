@@ -7,4 +7,6 @@ class User < ApplicationRecord
       user_tests: { user_id: id }
     )
   end
+
+  validates :username, presence: true
 end
